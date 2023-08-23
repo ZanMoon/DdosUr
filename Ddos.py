@@ -1,6 +1,7 @@
 #Ddos Dulu biar gacor
 import threading
 import os, sys
+import time
 import socket
 import random
 import requests
