@@ -66,7 +66,7 @@ def start():
   global useragents, acceptall, ref
   hh = random._urandom(75006)
   xx = int(0)
-  userKagen = "UserAgents: "+random.choice(UserAgents)+random.choice(acceptall)+random.choice(ref)+"\r\n"
+  userKagen = "UserAgents: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+"\r\n"
   acceptser = "AcceptAdmin: "+random.choice(acceptall)+random.choice(ref)+"\r\n"
   referrer = random.choice(ref)
   content    = "Content-Type: application/x-www-form-urlencoded\r\n"
