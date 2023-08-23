@@ -85,5 +85,5 @@ def start():
             s.close()
             print("Ez Crashh")
 for i in range(thread):
-  thred = threading.thread(target=start)
+  thred = threading.Thread(target=start)
   thred.start()
