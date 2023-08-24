@@ -183,6 +183,6 @@ def start():
             s.close()
             print("Ez Crashh")
 for i in range(th):
-  th1 = threading.Thread(target=start)
-  th1.start()
+  th = threading.Thread(target=start)
+  th.start()
   #aku mah pemula bisa apa?
