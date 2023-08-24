@@ -157,9 +157,9 @@ def start2():
   
 def start():
   global useragents, acceptall, ref, socks5
-  time.sleep(0.01)
   hh = random._urandom(75006)
   xx = int(0)
+  time.sleep(0.01)
   userKagen = "UserAgents: "+random.choice(useragents)+random.choice(acceptall)+r+random.choice(ref)+random_.random(20152)+"\r\n"
   Userkw = "Binatang: "+random.choice(socks5)+random.choice(ref)+random.choice(useragents)+random.choice(acceptall)+"\r\n"
   acceptser = "AcceptAdmin: "+random.choice(acceptall)+random.choice(ref)+"\r\n"
