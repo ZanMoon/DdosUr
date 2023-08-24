@@ -185,10 +185,5 @@ def start():
             print("Ez Crashh")
 for i in range(th):
   th1 = threading.Thread(target=start)
-  th2 = threading.Thread(target=start)
   th1.start()
-  th2.start()
-for i in range(th):
-  th1.join()
-  th2.join()
   #aku mah pemula bisa apa?
