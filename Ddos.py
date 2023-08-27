@@ -187,6 +187,4 @@ for i in range(th):
   th1.start()
   th2.start()
 
- th1.join()
- th2.join()
   #aku mah pemula bisa apa?
