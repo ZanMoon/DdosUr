@@ -382,7 +382,32 @@ def spoofer():
     acces =  addr[1] + d + addr[2] + d + addr[3] + d + addr[4]
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     return acces
- 
+
+def spoofer2():
+    addr = [192, 168, 0, 1]
+    d = '.'
+    addr[0] = str(random.randrange(11, 197))
+    addr[2] = str(random.randrange(0, 255))
+    addr[3] = str(random.randrange(0, 255))
+    addr[4] = str(random.randrange(2, 254))
+    acces =  addr[1] + d + addr[2] + d + addr[3] + d + addr[4]
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    return acces
+
+def spoofer3():
+    global byte5
+    byte5 = random._urandom(5491)
+    addr = [192, 168, 0, 1]
+    d = '.'
+    addr[0] = str(random.randrange(11, 197))
+    addr[2] = str(random.randrange(0, 255))
+    addr[3] = str(random.randrange(0, 255))
+    addr[4] = str(random.randrange(2, 254))
+    addr[5] = str(random.randrange(2, 254))
+    acces =  addr[1] + d + addr[2] + d + addr[3] + d + addr[4] + d +addr[5]
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    return acces
+    return byte5
 
 def start2():
   global useragents, acceptall, ref, socks5
