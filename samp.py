@@ -5,9 +5,9 @@ import socket
 import random, requests
  
 print("Ddos Samp | 2023 | time:274.180day |")
-ip = str(input("Ip>>"))
+ip = int(input("Ip>>"))
 ip = int(input("Port/t>>"))
-th = int(input("Port/t>>"))
+th = int(input("Thread/t>>"))
 
 def spoofer1():
     addr = [192, 168, 0, 1]
