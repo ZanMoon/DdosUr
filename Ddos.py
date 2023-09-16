@@ -516,10 +516,6 @@ def start():
               pass
 for i in range(th):
   th1 = threading.Thread(target=start)
-  th2 = threading.Thread(target=spoofer4)
-  th3 = threading.Thread(target=start2)
   th1.start()
-  th2.join()
-  th3.join()
 
   #aku mah pemula bisa apa?
